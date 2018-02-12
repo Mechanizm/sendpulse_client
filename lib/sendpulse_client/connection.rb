@@ -3,7 +3,7 @@ module SendpulseClient
     include HTTParty
     base_uri 'https://api.sendpulse.com/'
     format :json
-    logger Rails.logger
+    require 'logger'
 
     Token = Struct.new(:value, :created_at) do
       URL = 'https://api.sendpulse.com/oauth/access_token'.freeze
@@ -20,7 +20,7 @@ module SendpulseClient
           grant_type: 'client_credentials'
         }
 
-        @value = HTTParty.post(URL, body: body)['access_token'], logger: SendpulseClient.configuration.logger
+        @value = HTTParty.post(URL, body: body)['access_token'], logger: Rails.logger
         @created_at = Time.now
       end
 
