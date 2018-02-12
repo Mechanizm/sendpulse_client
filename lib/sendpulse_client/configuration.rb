@@ -1,6 +1,6 @@
 module SendpulseClient
   class Configuration
-    attr_accessor :client_id, :client_secret
+    attr_accessor :client_id, :client_secret, :logger
 
     def initialize
       @client_id = ''
