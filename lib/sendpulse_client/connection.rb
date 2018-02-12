@@ -20,7 +20,7 @@ module SendpulseClient
           grant_type: 'client_credentials'
         }
 
-        @value = HTTParty.post(URL, body: body)['access_token'], logger: Rails.logger
+        @value = HTTParty.post(URL, logger: Rails.logger, body: body)['access_token']
         @created_at = Time.now
       end
 

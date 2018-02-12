@@ -5,6 +5,7 @@ require 'sendpulse_client/campaign'
 require 'sendpulse_client/addressbook'
 require 'sendpulse_client/configuration'
 require 'sendpulse_client/email'
+require 'logger'
 
 module SendpulseClient
 end
