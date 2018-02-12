@@ -5,6 +5,7 @@ module SendpulseClient
     def initialize
       @client_id = ''
       @client_secret = ''
+      @logger = Rails.logger
     end
   end
 
