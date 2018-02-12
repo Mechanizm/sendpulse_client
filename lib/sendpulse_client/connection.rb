@@ -3,7 +3,6 @@ module SendpulseClient
     include HTTParty
     base_uri 'https://api.sendpulse.com/'
     format :json
-    require 'logger'
 
     Token = Struct.new(:value, :created_at) do
       URL = 'https://api.sendpulse.com/oauth/access_token'.freeze
